@@ -11,8 +11,11 @@
         <local:MainPageViewModel/>
     </ContentPage.BindingContext>
     <StackLayout  HorizontalOptions="Center" VerticalOptions="Center">
-        <Label Text="{Binding DateTime,StringFormat='{0:T}'}"
-              
-               FontSize="Large"/>
+        <Label Text="{Binding DateTime,StringFormat='{0:M}'}" FontSize="Large"/>
+        <Label Text="{Binding DateTime,StringFormat='{0:T}'}" FontSize="Large"/>
+        <Label Text="{Binding DateTime,StringFormat='{0:MMM}'}" FontSize="Large"/>
+        <Label Text="{Binding StopWatchSeconds}" FontSize="Medium"/>
+        <Label Text="60-0 timer below" FontSize="Large"/>
+        <Label Text="{Binding Timer}" />
     </StackLayout>
 </ContentPage>
