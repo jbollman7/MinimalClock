@@ -8,7 +8,7 @@ namespace MVVMTimer.ViewModels
 {
     public class MainPageViewModel : INotifyPropertyChanged
     {
-        int counter = 60;
+        int counter = 59;
         Stopwatch stopWatch = new Stopwatch();
         string timer;
         private bool timeRunning;
@@ -23,7 +23,11 @@ namespace MVVMTimer.ViewModels
                 sCounter = (counter - sixtyStopWatch.Elapsed.Seconds).ToString();
                 Timer = sCounter;
                 //Timer = sixtyStopWatch.Elapsed.Seconds.ToString();
-                return true;
+                if (counter - sixtyStopWatch.Elapsed.Seconds > 0)
+                    return true;
+                else
+
+                    return false;
             });
 
             
